@@ -1,0 +1,43 @@
+### Node
+node_modules/
+npm-debug.log*
+yarn-error.log
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+### Nuxt / build outputs
+.nuxt/
+.output/
+dist/
+public/
+
+### Environment files
+.env
+.env.*
+.env.local
+
+### Logs
+*.log
+logs/
+
+### OS / Editor
+.DS_Store
+.vscode/
+.idea/
+.history/
+
+### TypeScript
+*.tsbuildinfo
+
+### Test / Coverage
+coverage/
+.nyc_output/
+
+### Misc
+.cache/
+/.parcel-cache/
+*.pem
+*.key
+
+node_modules

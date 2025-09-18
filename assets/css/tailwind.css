@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom tokens from demo_studio_small_apps_ui.txt */
+:root {
+  --primary: #1B263B;
+  --secondary: #415A77;
+  --accent: #778DA9;
+  --success: #1B7F75;
+  --warning: #D67E3B;
+  --error: #C62D42;
+  --info: #2856A3;
+  --background: #f8f9fa;
+  --surface: #ffffff;
+  --on-surface: #1B263B;
+  --on-surface-secondary: #415A77;
+  --border: #e0e0e0;
+  --divider: #f0f0f0;
+}
+
+/* Global base tweaks */
+html, body, #__nuxt {
+  height: 100%;
+  background: var(--background);
+}
+
+/* Decorative gradient blobs for the hero (subtle nod to the provided inspiration image) */
+.blob {
+  position: absolute;
+  filter: blur(24px);
+  opacity: 0.25;
+}
+.blob-1 { background: #FF7A59; width: 460px; height: 460px; border-radius: 50%; top: -120px; left: -120px; }
+.blob-2 { background: #35B7A9; width: 360px; height: 360px; border-radius: 50%; bottom: -100px; right: -80px; }
+.blob-3 { background: #3BA0D6; width: 280px; height: 280px; border-radius: 50%; top: 20%; right: 10%; }
+@media (max-width: 768px) {
+  .blob-1, .blob-2, .blob-3 { opacity: 0.2; transform: scale(0.8); }
+}
+
+/* Focus ring utility for "shadcn-like" feel */
+.focus-ring {
+  @apply outline-none ring-2 ring-primary/15 ring-offset-2 ring-offset-surface;
+}
