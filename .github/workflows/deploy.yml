@@ -18,7 +18,15 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm ci
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json','**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies (npm)
+        run: npm install
 
       - name: Build static site
         # For Nuxt: generate static output
