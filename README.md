@@ -120,6 +120,25 @@ Verification
 
 If you prefer, I can add a tiny troubleshooting script or cross-check Node/npm versions automatically—tell me your preference and I’ll add it.
 
+Generate PNG favicons (optional)
+--------------------------------
+If you want PNG fallbacks for the SVG favicon, a small node script is included at `scripts/generate-favicons.js` which uses `sharp` to generate 16x16, 32x32, and 180x180 PNGs into `public/`.
+
+Install sharp and run the script:
+
+```bash
+# install sharp locally (requires a supported Node toolchain)
+npm install sharp --save-dev
+
+# or with pnpm
+pnpm add -D sharp
+
+# run the generator
+node scripts/generate-favicons.js
+```
+
+This will create `public/favicon-16x16.png`, `public/favicon-32x32.png`, and `public/apple-touch-icon.png`.
+
 
 
 
