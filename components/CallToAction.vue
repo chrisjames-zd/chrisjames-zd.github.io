@@ -5,7 +5,7 @@
 			Get Demo Studio
 		</NuxtLink>
 
-		<NuxtLink to="https://google.com" class="inline-flex items-center gap-2 px-4 py-2 border border-divider rounded-lg text-sm font-medium text-on-surface/90 hover:bg-accent/5" target="_blank">
+		<NuxtLink to="https://docs.google.com/forms/d/e/1FAIpQLSdrOzJF8-UcvCHQC07weGGwq5fuEFon4OYTI0tYMLHQTXnbsA/viewform?usp=header" class="inline-flex items-center gap-2 px-4 py-2 border border-divider rounded-lg text-sm font-medium text-on-surface/90 hover:bg-accent/5" target="_blank">
 			<span class="mdi mdi-email-outline" aria-hidden="true" />
 			Request access
 		</NuxtLink>

@@ -13,7 +13,7 @@ export const resources: ResourceLink[] = [
     id: 'request-access',
     title: 'Request Access',
     description: 'Submit access request form to use Demo Studio.',
-    href: process.env.NUXT_PUBLIC_REQUEST_ACCESS_URL || '',
+    href: 'https://docs.google.com/forms/d/e/1FAIpQLSdrOzJF8-UcvCHQC07weGGwq5fuEFon4OYTI0tYMLHQTXnbsA/viewform?usp=header',
     icon: 'mdi-account-plus-outline',
     external: true
   },
