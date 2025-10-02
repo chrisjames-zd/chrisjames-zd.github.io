@@ -1,0 +1,580 @@
+{{!-- Static Demo Engineering Help Center Homepage --}}
+{{!-- Preserving original content and design --}}
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/@zendeskgarden/css-bedrock@7.0.21,npm/@zendeskgarden/css-utilities@4.3.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap">
+
+<div class="min-h-screen flex flex-col" id="demo-engineering">
+  <main class="flex-1">
+    <div>
+      <section id="about" class="relative overflow-hidden">
+        <div class="blob blob-1 animate-floaty"></div>
+        <div class="blob blob-2 animate-floaty"></div>
+        <div class="blob blob-3 animate-floaty"></div>
+
+        <div class="container mx-auto px-6 sm:px-8 lg:px-10 py-16 sm:py-20">
+          <div class="grid lg:grid-cols-2 gap-10 items-start">
+            <div class="space-y-4" style="z-index:1000; position: relative;">
+              <div class="inline-flex items-center gap-2 bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-medium text-on-surface">
+                <span class="mdi mdi-account-group-outline" aria-hidden="true"></span>
+                About Us
+              </div>
+
+              <div class="grid grid-cols-1 gap-6">
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-on-surface leading-tight">Zendesk Demo Engineering</h2>
+              <p class="text-on-surface/80 max-w-prose">We partner with product, sales, and marketing to build, operate, and scale repeatable product demos. Our team provides demo enhancement tooling, shared accounts, and concierge support to reduce setup time and win opportunities.</p>
+              <div class="rounded-2xl border border-divider bg-surface shadow-card p-6">
+                <header class="border-b border-divider pb-3 mb-4">
+                  <div class="flex items-center gap-2">
+                    <span class="mdi mdi-account-cog-outline text-accent text-2xl" aria-hidden="true"></span>
+                    <h3 class="font-semibold">Who we are</h3>
+                  </div>
+                </header>
+                <div>
+                  <ul class="mt-3 space-y-1 text-on-surface/80">
+                    <li><strong>Director:</strong> Asa Engel</li>
+                    <li><strong>Demo Architects:</strong> Tetyana Kernychna, Iryna Parahailo, Connor Campbell, Rico Corona, Chris James</li>
+                    <li><strong>Demo Engineers:</strong> Marcelo De Bortoli, Aron Diploma, Daniel Montes, Henrique Watanabe, Patrick Co</li>
+                  </ul>
+                  <p class="text-xs text-on-surface/60 mt-3">
+                    Note: Our Team Roster may change... Check the <a href="https://zendesk.enterprise.slack.com/archives/C08SZL6R214" target="_blank">#demo-engineering-announce</a> channel for updates.
+                  </p>
+                </div>
+              </div>
+              </div>
+            </div>
+            <div style="align-items:flex-end;height:100%;display:flex;z-index:1000; position: relative;">
+              <div class="grid grid-cols-1 gap-6">
+                <div class="bg-surface rounded-2xl border border-divider p-6 shadow-card">
+                  <h3 class="font-semibold text-on-surface mb-3">Submit a new request</h3>
+                  <p class="text-on-surface/80 mb-4">Need help with demos, access, or a custom ask? Submit a request and we'll respond quickly.</p>
+                  <a href="/hc/{{help_center.locale}}/requests/new" class="inline-flex items-center gap-3 bg-primary text-white rounded-lg font-semibold hover:opacity-90 transition" style="padding: 0.75rem 1.5rem;">Create New Request</a>
+                </div>
+                <div class="bg-surface rounded-2xl border border-divider p-6 shadow-card">
+                  <h3 class="font-semibold text-on-surface mb-3">View your requests</h3>
+                  <p class="text-on-surface/80 mb-4">Track status, responses, and follow-up tasks for previously submitted requests.</p>
+                  <a href="/hc/{{help_center.locale}}/requests" class="inline-flex items-center gap-3 border border-divider rounded-lg font-semibold text-on-surface/90 hover:bg-accent/5 transition" style="padding: 0.75rem 1.5rem;">View My Requests</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-divider bg-surface shadow-card p-6" style="margin-top:2.5rem; position: relative; z-index: 1000;">
+            <header class="border-b border-divider pb-3 mb-4">
+              <div class="flex items-center gap-2">
+                <span class="mdi mdi-forum-outline text-accent text-2xl" aria-hidden="true"></span>
+                <h3 class="font-semibold">How to reach us</h3>
+              </div>
+            </header>
+            <div>
+              <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm">
+                <li class="flex items-center gap-2">
+                  <span class="mdi mdi-pound text-primary"></span>
+                  <span><strong><a href="https://zendesk.enterprise.slack.com/archives/C75UJSMN0" target="_blank">#ask-demo-engineering</a></strong> ∴ questions, support, access</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="mdi mdi-bullhorn-outline text-primary"></span>
+                  <span><strong><a href="https://zendesk.enterprise.slack.com/archives/C08SZL6R214" target="_blank">#demo-engineering-announce</a></strong> ∴ updates & launches</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="mdi mdi-shield-lock-outline text-primary"></span>
+                  <span><a href="/hc/{{help_center.locale}}/requests/new" target="_blank">Submit a request to the team</a></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Unified Demo Studio overview and All Products-->
+      <section id="demo-studio" class="bg-background">
+
+        <div class="container mx-auto px-6 sm:px-8 lg:px-10 py-16 sm:py-20">
+          <div class="relative isolate grid lg:grid-cols-2 gap-10 items-center">
+            <div class="space-y-6 animate-fadeInUp" style="height:100%">
+              <div class="inline-flex items-center gap-2 bg-success/10 text-success px-3 py-1 rounded-full text-xs font-medium">
+                <span class="mdi mdi-robot-outline" aria-hidden="true"></span> 
+                Internal Tooling 
+              </div>
+              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-on-surface leading-tight">
+                Demo Studio 
+                <span class="block text-on-surface/80 text-xl sm:text-2xl font-medium mt-2">
+                  The all-in-one, GenAI-powered demo setup & management tool 
+                </span>
+              </h1>
+              <p class="text-on-surface/80 max-w-prose">
+                Demo Studio runs inside your Zendesk instance. Use the button below to access it, or request access if you don't have permissions yet. 
+              </p>
+              <div class="flex flex-wrap gap-3">
+                    <div class="flex items-center gap-3">
+              <div class="relative inline-block text-left" style="/* ensures the absolute menu is positioned relative to this button container */">
+                <!-- Temporarily revert to a link to the Google Form; dropdown remains in DOM for future enablement -->
+                <a id="get-demo-studio-btn" href="https://docs.google.com/forms/d/1E44Rcw6an2aJtSaQ1MMi2c07kb3q8o8wWCQEYzWxy3Y/edit" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-5 py-3 bg-primary text-white rounded-lg text-base font-semibold hover:opacity-90" role="button" aria-haspopup="true" aria-expanded="false">
+                          <span class="mdi mdi-rocket-launch" aria-hidden="true"></span>
+                          Get Demo Studio
+                        </a>
+
+                    <!-- Tooltip/dropdown (absolute overlay so it doesn't affect layout) -->
+                    <div id="get-demo-studio-menu" class="origin-top-right absolute right-0" role="menu" aria-labelledby="get-demo-studio-btn" style="z-index:1200; display: none; top:100%; border-radius:0.75rem; background-color:var(--surface); border:1px solid var(--divider); box-shadow:var(--shadow-card); padding:1rem;">
+                      <label for="demo-subdomain" class="text-sm text-on-surface/80 block mb-2">Enter Zendesk subdomain</label>
+                      <div class="flex gap-2">
+                        <input id="demo-subdomain" type="text" placeholder="SUBDOMAIN" class="flex-1 px-3 py-2 border border-divider rounded-md focus:outline-none focus:ring-2 focus:ring-primary/30" aria-label="Zendesk subdomain" />
+                        <button id="demo-subdomain-submit" class="px-3 py-2 bg-primary text-white rounded-md font-semibold">Open</button>
+                      </div>
+                      <p class="text-xs text-on-surface/60 mt-2">Example: if your instance is <code>acme.zendesk.com</code>, enter <code>acme</code>.</p>
+                    </div>
+                  </div>
+                  <a href="https://docs.google.com/forms/d/1E44Rcw6an2aJtSaQ1MMi2c07kb3q8o8wWCQEYzWxy3Y/edit" target="_blank" class="inline-flex items-center gap-3 px-5 py-3 border border-divider rounded-lg text-base font-semibold text-on-surface/90 hover:bg-accent/5">
+                    <span class="mdi mdi-email-outline" aria-hidden="true"></span> 
+                    Request access 
+                  </a>
+                </div>
+              </div>
+              <ul class="text-on-surface/70 text-sm grid sm:grid-cols-2 gap-2 max-w-xl">
+                <li class="flex items-center gap-2">
+                  <span class="mdi mdi-cog-outline text-accent"></span> 
+                  Guided configuration flows
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="mdi mdi-robot-outline text-accent"></span> 
+                  GenAI-assisted setup
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="mdi mdi-broom text-accent"></span> 
+                  Account hygiene & cleanup
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="mdi mdi-school-outline text-accent"></span> 
+                  Templates, best practices, training
+                </li>
+              </ul>
+            </div>
+            <div class="relative">
+              <div class="bg-surface rounded-2xl border border-divider shadow-card p-6 lg:p-8">
+                <h3 class="font-semibold text-on-surface mb-3 flex items-center gap-2">
+                  <span class="mdi mdi-view-dashboard-outline text-accent"></span> 
+                  What's inside 
+                </h3>
+                <div class="grid sm:grid-cols-2 gap-3 text-sm">
+                  <div class="flex items-center gap-3 rounded-lg border border-divider px-3 py-2 hover:bg-accent/5 transition">
+                    <span class="mdi mdi-file-multiple-outline text-accent text-xl" aria-hidden="true"></span>
+                    <span class="text-on-surface/90">Configuration Cloning with Industry Templates</span>
+                  </div>
+                  <div class="flex items-center gap-3 rounded-lg border border-divider px-3 py-2 hover:bg-accent/5 transition">
+                    <span class="mdi mdi-database-export text-accent text-xl" aria-hidden="true"></span>
+                    <span class="text-on-surface/90">Help Center Cloning</span>
+                  </div>
+                  <div class="flex items-center gap-3 rounded-lg border border-divider px-3 py-2 hover:bg-accent/5 transition">
+                    <span class="mdi mdi-robot-outline text-accent text-xl" aria-hidden="true"></span>
+                    <span class="text-on-surface/90">AI-Powered Configuration</span>
+                  </div>
+                  <div class="flex items-center gap-3 rounded-lg border border-divider px-3 py-2 hover:bg-accent/5 transition">
+                    <span class="mdi mdi-account-multiple-outline text-accent text-xl" aria-hidden="true"></span>
+                    <span class="text-on-surface/90">Bulk Account Management</span>
+                  </div>
+                  <div class="flex items-center gap-3 rounded-lg border border-divider px-3 py-2 hover:bg-accent/5 transition">
+                    <span class="mdi mdi-broom text-accent text-xl" aria-hidden="true"></span>
+                    <span class="text-on-surface/90">Instance Cleanup</span>
+                  </div>
+                  <div class="flex items-center gap-3 rounded-lg border border-divider px-3 py-2 hover:bg-accent/5 transition">
+                    <span class="mdi mdi-pencil-plus text-accent text-xl" aria-hidden="true"></span>
+                    <span class="text-on-surface/90">Content Creation & Management (AI-Powered Content Creation)</span>
+                  </div>
+                  <div class="flex items-center gap-3 rounded-lg border border-divider px-3 py-2 hover:bg-accent/5 transition">
+                    <span class="mdi mdi-file-document-edit-outline text-accent text-xl" aria-hidden="true"></span>
+                    <span class="text-on-surface/90">Procedure Builder</span>
+                  </div>
+                  <div class="flex items-center gap-3 rounded-lg border border-divider px-3 py-2 hover:bg-accent/5 transition">
+                    <span class="mdi mdi-translate text-accent text-xl" aria-hidden="true"></span>
+                    <span class="text-on-surface/90">Bulk Translation</span>
+                  </div>
+                  <div class="flex items-center gap-3 rounded-lg border border-divider px-3 py-2 hover:bg-accent/5 transition">
+                    <span class="mdi mdi-library-shelves text-accent text-xl" aria-hidden="true"></span>
+                    <span class="text-on-surface/90">Demo Resource Catalog</span>
+                  </div>
+                  <div class="flex items-center gap-3 rounded-lg border border-divider px-3 py-2 hover:bg-accent/5 transition">
+                    <span class="mdi mdi-robot-industrial text-accent text-xl" aria-hidden="true"></span>
+                    <span class="text-on-surface/90">Automation & Tools (Robotic Browser Automation)</span>
+                  </div>
+                  <div class="flex items-center gap-3 rounded-lg border border-divider px-3 py-2 hover:bg-accent/5 transition">
+                    <span class="mdi mdi-eye-settings text-accent text-xl" aria-hidden="true"></span>
+                    <span class="text-on-surface/90">DemoLens (now supporting WFM!)</span>
+                  </div>
+                  <div class="flex items-center gap-3 rounded-lg border border-divider px-3 py-2 hover:bg-accent/5 transition">
+                    <span class="mdi mdi-school text-accent text-xl" aria-hidden="true"></span>
+                    <span class="text-on-surface/90">Knowledge & Training (EAP/Beta Tracker, SME Directory, Video Catalog)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DemoLens section -->
+      <section id="demolens" class="border-t border-divider">
+        <div class="container mx-auto px-6 sm:px-8 lg:px-10 py-16 sm:py-20">
+          <div class="inline-flex items-center gap-2 bg-success/10 text-success px-3 py-1 rounded-full text-xs font-medium">
+            <span class="mdi mdi-eye-outline" aria-hidden="true"></span> 
+            Internal Tooling 
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold">DemoLens</h2>
+          <p class="text-on-surface/80 mt-2 max-w-prose">DemoLens is a Chrome extension that simulates real data and controls what’s displayed in the browser, enabling curated dashboards and scenarios for demos.</p>
+          <div class="mt-6 grid lg:grid-cols-2 gap-6">
+            <div class="rounded-2xl border border-divider bg-surface p-6">
+              <h3 class="font-semibold">Overview</h3>
+              <p class="text-sm text-on-surface/80 mt-2">Chrome extension designed to simulate real data in parts of Zendesk like Explore and Talk. Create dashboards and scenarios that adapt to different demo narratives.</p>
+              <p class="text-sm text-on-surface/80 mt-2"><strong>Built by:</strong> Daniel Montes — Senior Demo Engineer</p>
+
+            </div>
+            <div class="rounded-2xl border border-divider bg-surface p-6">
+              <h3 class="font-semibold">How it works</h3>
+              <ul class="list-disc pl-5 mt-2 text-sm text-on-surface/80">
+                <li>Create dashboards</li>
+                <li>Enable / Disable scenarios (one at a time)</li>
+                <li>Instance cloning support to reuse curated data across demos</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-6 py-4">
+            <a href="https://chromewebstore.google.com/detail/zendesk-demolens-z3n-demo/lfahnofhgcmbbmikobjdgloecloeoehd" target="_blank" rel="noopener" class="py-3 inline-flex items-center justify-center w-full sm:w-auto gap-3 px-4 bg-primary text-white rounded-lg text-xl font-semibold hover:opacity-95 transition"> 
+              <span class="mdi mdi-download" aria-hidden="true"></span>
+              Instal DemoLens Chrome Extension
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Shared Demo Accounts section -->
+      <section id="shared-demo-accounts" class="bg-background border-t border-divider">
+        <div class="container mx-auto px-6 sm:px-8 lg:px-10 py-16 sm:py-20">
+          <div class="inline-flex items-center gap-2 bg-success/10 text-success px-3 py-1 rounded-full text-xs font-medium">
+            <span class="mdi mdi-account-multiple-outline" aria-hidden="true"></span> 
+            Pre-configured Demos
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold">Shared Demo Accounts</h2>
+          <p class="text-on-surface/80 mt-2 max-w-prose">Curated, secure demo accounts maintained for consistent hands-on demos.</p>
+          <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+
+            <a href="https://z3n-zencx.zendesk.com/agent" class="block rounded-2xl border border-divider bg-surface p-5 hover:shadow-elevated hover:-translate-y-0.5 transition" target="_blank" rel="noopener">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="mdi mdi-account-group-outline mdi text-2xl text-accent" aria-hidden="true"></span>
+                <h4 class="font-semibold text-on-surface">ZenCX</h4>
+              </div>
+              <p class="text-sm text-on-surface/80">z3n-zencx — Primary General CX Demo Account</p>
+            </a>
+            <a href="https://z3nempexp.zendesk.com/agent" class="block rounded-2xl border border-divider bg-surface p-5 hover:shadow-elevated hover:-translate-y-0.5 transition" target="_blank" rel="noopener">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="mdi mdi-briefcase-outline mdi text-2xl text-accent" aria-hidden="true"></span>
+                <h4 class="font-semibold text-on-surface">ZenES</h4>
+              </div>
+              <p class="text-sm text-on-surface/80">z3nempex — Primary IT / HR Demo Account</p>
+            </a>
+            <a href="https://z3n-beta.zendesk.com/agent" class="block rounded-2xl border border-divider bg-surface p-5 hover:shadow-elevated hover:-translate-y-0.5 transition" target="_blank" rel="noopener">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="mdi mdi-flask-outline mdi text-2xl text-accent" aria-hidden="true"></span>
+                <h4 class="font-semibold text-on-surface">ZenBeta</h4>
+              </div>
+              <p class="text-sm text-on-surface/80">z3n-beta — Experimental / Test Features</p>
+            </a>
+            <a href="https://madisonisland.zendesk.com/admin" class="block rounded-2xl border border-divider bg-surface p-5 hover:shadow-elevated hover:-translate-y-0.5 transition" target="_blank" rel="noopener">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="mdi mdi-storefront mdi text-2xl text-accent" aria-hidden="true"></span>
+                <h4 class="font-semibold text-on-surface">ZenShop</h4>
+              </div>
+              <p class="text-sm text-on-surface/80">madisonisland — Retail specific demo account</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Opportunity Support section -->
+      <section id="opportunity-support" class="border-t border-divider">
+        <div class="container mx-auto px-6 sm:px-8 lg:px-10 py-16 sm:py-20">
+          <div class="inline-flex items-center gap-2 bg-success/10 text-success px-3 py-1 rounded-full text-xs font-medium">
+            <span class="mdi mdi-handshake" aria-hidden="true"></span> 
+            Hands-on Support
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold">Opportunity Support</h2>
+          <p class="text-on-surface/80 mt-2 max-w-prose">Hands-on configuration, non-developer support, and concierge services to help win key deals.</p>
+          <div class="mt-6 grid lg:grid-cols-3 gap-6">
+            <div class="rounded-2xl border border-divider bg-surface p-6">
+              <h4 class="font-semibold">Hands-on Configuration</h4>
+              <p class="text-sm text-on-surface/80 mt-2">We can configure demo environments tailored to specific opportunities.</p>
+            </div>
+            <div class="rounded-2xl border border-divider bg-surface p-6">
+              <h4 class="font-semibold">Non-developer Support</h4>
+              <p class="text-sm text-on-surface/80 mt-2">Guidance and setup without requiring engineering resources from your team.</p>
+            </div>
+            <div class="rounded-2xl border border-divider bg-surface p-6">
+              <h4 class="font-semibold">Concierge Support</h4>
+              <p class="text-sm text-on-surface/80 mt-2">High-touch assistance for priority deals and demos.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Custom Development section -->
+      <section id="custom-development" class="bg-background border-t border-divider">
+        <div class="container mx-auto px-6 sm:px-8 lg:px-10 py-16 sm:py-20">
+          <div class="inline-flex items-center gap-2 bg-success/10 text-success px-3 py-1 rounded-full text-xs font-medium">
+            <span class="mdi mdi-laptop-code" aria-hidden="true"></span> 
+            Hands-on Support
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold">Custom Development</h2>
+          <p class="text-on-surface/80 mt-2 max-w-prose">Custom demos and integrations tailored to your needs.</p>
+          <div class="mt-6 grid lg:grid-cols-2 gap-6">
+            <div class="rounded-2xl border border-divider bg-surface p-6">
+              <h4 class="font-semibold">Solution Developer Engagement</h4>
+              <ul class="list-none pl-0 mt-6 text-sm text-on-surface/80 space-y-2">
+                <li class="flex items-start gap-3"><span class="mdi mdi-laptop-account text-accent text-xl" aria-hidden="true"></span> Custom ZAF POC Apps</li>
+                <li class="flex items-start gap-3"><span class="mdi mdi-palette text-accent text-xl" aria-hidden="true"></span> Custom Help Center Themes</li>
+                <li class="flex items-start gap-3"><span class="mdi mdi-cellphone text-accent text-xl" aria-hidden="true"></span> Mobile Apps & Integrations</li>
+                <li class="flex items-start gap-3"><span class="mdi mdi-robot-outline text-accent text-xl" aria-hidden="true"></span> Advanced Messaging & Bot Experiences</li>
+                <li class="flex items-start gap-3"><span class="mdi mdi-puzzle-outline text-accent text-xl" aria-hidden="true"></span> Core Platform Integrations (External Actions, Webhooks)</li>
+                <li class="flex items-start gap-3"><span class="mdi mdi-database-import text-accent text-xl" aria-hidden="true"></span> Custom Data Imports</li>
+              </ul>
+              <div class="mt-4 text-sm text-on-surface/80">
+                <p>If you'd like to engage Demo Engineering for custom work, submit a request and include details about scope, timeline, and contact information. Our team will follow up to propose the right engagement model.</p>
+                <div class="mt-6">
+                  <a href="/hc/{{help_center.locale}}/requests/new?ticket_form_id=9312830097690" class="inline-flex items-center gap-3 px-5 py-3 bg-primary text-white rounded-lg text-base font-semibold hover:opacity-90" style="font-size:18px;">Submit a Solution Developer Request</a>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-2xl border border-divider bg-surface p-6">
+              <h4 class="font-semibold">Demo Architect Engagement</h4>
+              <div class="mt-3 grid gap-2 text-sm text-on-surface/80">
+                <ul class="list-none pl-0 mt-2 space-y-2">
+                  <li class="flex items-start gap-3"><span class="mdi mdi-briefcase-outline text-accent text-xl" aria-hidden="true"></span><span>Shared Demo Accounts</span></li>
+                  <li class="flex items-start gap-3"><span class="mdi mdi-cube-outline text-accent text-xl" aria-hidden="true"></span><span>Demo Kits & Preconfigured Demo Accounts</span></li>
+                  <li class="flex items-start gap-3"><span class="mdi mdi-file-document-multiple-outline text-accent text-xl" aria-hidden="true"></span><span>Seismic & Demo Resources</span></li>
+                  <li class="flex items-start gap-3"><span class="mdi mdi-puzzle-outline text-accent text-xl" aria-hidden="true"></span><span>Reprise demos and interactive flows</span></li>
+                  <li class="flex items-start gap-3"><span class="mdi mdi-account-cog-outline text-accent text-xl" aria-hidden="true"></span><span>Hands-on Configuration, Non-developer & Concierge Support</span></li>
+                  <li class="flex items-start gap-3"><span class="mdi mdi-calendar-star text-accent text-xl" aria-hidden="true"></span><span>Field Marketing / Event prep, Product Webinars, Special Projects</span></li>
+                </ul>
+              </div>
+              <p class="text-sm text-on-surface/80 mt-3">Bugs, enhancements and enablement for shared demo environments, support for Sales Consulting enablement, and assistance with demo prep for large opportunities.</p>
+              <div class="mt-6">
+                <a href="/hc/{{help_center.locale}}/requests/new?ticket_form_id=9317522572314" class="inline-flex items-center gap-3 px-5 py-3 bg-primary text-white rounded-lg text-base font-semibold hover:opacity-90" style="font-size:18px;">Submit a Demo Architecture Request</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resources section -->
+      <section id="resources" class="bg-white">
+        <div class="container mx-auto px-6 sm:px-8 lg:px-10 py-16 sm:py-20">
+          <div class="space-y-8">
+            <div class="space-y-2">
+              <div class="inline-flex items-center gap-2 bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-medium">
+                <span class="mdi mdi-information-outline" aria-hidden="true"></span> 
+                Resources
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-bold text-on-surface">Useful links and tools</h2>
+              <p class="text-on-surface/80 max-w-prose">Launch Demo Studio, find guides, and explore shared assets.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <a href="/hc/{{help_center.locale}}/requests/new" class="block rounded-2xl border border-divider bg-surface p-5 hover:shadow-elevated hover:-translate-y-0.5 transition" target="_blank" rel="noopener">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="mdi-account-plus-outline mdi text-2xl text-accent" aria-hidden="true"></span>
+                  <h3 class="font-semibold text-on-surface">Demo Studio Access Form</h3>
+                </div>
+                <p class="text-sm text-on-surface/80">Join the Demo Studio Early Access by submitting this form.</p>
+              </a>
+              <a href="https://zendesk.seismic.com/app?ContentId=ffc3cc05-c2c7-47f7-a322-5e5e1d74f132#/doccenter/bd11dcd4-01d7-4e51-a560-b30c4a23ee7f/doc/%25252Fdd5c9daa42-91d8-42ca-b348-96bb44f60124%25252Fdd42502a00-d8d2-4a48-b89a-4a1215989748%25252FdfMWUyMjA0MWItZThhMy00NWI2LTlmNWQtZGU5OGMwMTI0NTk5%25252COthers%25252Flfed267c8f-ee13-4df4-96d4-bbb4e8576ae3/grid/?anchorId=44c46595-a2ad-4283-83bc-c276e55c438c" class="block rounded-2xl border border-divider bg-surface p-5 hover:shadow-elevated hover:-translate-y-0.5 transition" target="_blank" rel="noopener">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="mdi-file-document-multiple-outline mdi text-2xl text-accent" aria-hidden="true"></span>
+                  <h3 class="font-semibold text-on-surface">Seismic</h3>
+                </div>
+                <p class="text-sm text-on-surface/80">The Demo Engineering Homepage on Seismic</p>
+              </a>
+              <a href="https://docs.google.com/spreadsheets/d/1dGYCC__7BTP-pcNTiF6C2kNbO5MIrLqZs1ro6bjUQSw/edit?gid=1791517565#gid=1791517565" class="block rounded-2xl border border-divider bg-surface p-5 hover:shadow-elevated hover:-translate-y-0.5 transition" target="_blank" rel="noopener">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="mdi-play-circle-outline mdi text-2xl text-accent" aria-hidden="true"></span>
+                  <h3 class="font-semibold text-on-surface">Reprise</h3>
+                </div>
+                <p class="text-sm text-on-surface/80">Interactive product demos and flows.</p>
+              </a>
+              <a href="https://docs.google.com/spreadsheets/d/1dGYCC__7BTP-pcNTiF6C2kNbO5MIrLqZs1ro6bjUQSw/edit?gid=0#gid=0" class="block rounded-2xl border border-divider bg-surface p-5 hover:shadow-elevated hover:-translate-y-0.5 transition" target="_blank" rel="noopener">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="mdi-account-group-outline mdi text-2xl text-accent" aria-hidden="true"></span>
+                  <h3 class="font-semibold text-on-surface">Shared Demo Accounts</h3>
+                </div>
+                <p class="text-sm text-on-surface/80">Access guidance and support for shared environments.</p>
+              </a>
+              <a href="https://zendesk.enterprise.slack.com/archives/C08SZL6R214" class="block rounded-2xl border border-divider bg-surface p-5 hover:shadow-elevated hover:-translate-y-0.5 transition" target="_blank" rel="noopener">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="mdi-bullhorn-outline mdi text-2xl text-accent" aria-hidden="true"></span>
+                  <h3 class="font-semibold text-on-surface">#demo-engineering-announce</h3>
+                </div>
+                <p class="text-sm text-on-surface/80">Team updates, tools and environment updates, and news.</p>
+              </a>
+              <a href="https://zendesk.enterprise.slack.com/archives/C75UJSMN0" class="block rounded-2xl border border-divider bg-surface p-5 hover:shadow-elevated hover:-translate-y-0.5 transition" target="_blank" rel="noopener">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="mdi-chat-question-outline mdi text-2xl text-accent" aria-hidden="true"></span>
+                  <h3 class="font-semibold text-on-surface">#ask-demo-engineering</h3>
+                </div>
+                <p class="text-sm text-on-surface/80">Questions, troubleshooting, and access help for shared demo accounts.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+
+<script>
+// Smooth scrolling for anchor links
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+});
+</script>
+
+<style>
+/* Dropdown overlay animation: fade + slight translate */
+#get-demo-studio-menu {
+  opacity: 0;
+  transform: translateY(-6px) scale(0.995);
+  transition: opacity 180ms ease, transform 180ms ease;
+  will-change: opacity, transform;
+}
+#get-demo-studio-menu.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+</style>
+
+<script>
+// Demo Studio subdomain picker (portal overlay to prevent layout shifts)
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.getElementById('get-demo-studio-btn');
+  const menu = document.getElementById('get-demo-studio-menu');
+  const input = document.getElementById('demo-subdomain');
+  const submit = document.getElementById('demo-subdomain-submit');
+
+  if (!btn || !menu || !input || !submit) return;
+
+  // Move the menu to document.body so it becomes a top-level overlay (portal)
+  const originalParent = menu.parentNode;
+  menu.style.position = 'absolute';
+  menu.style.display = 'none';
+  document.body.appendChild(menu);
+
+  // Helper to measure and position the menu aligned to the button (right-aligned)
+  function positionMenu() {
+    const prevDisplay = menu.style.display;
+    const prevVisibility = menu.style.visibility;
+    if (prevDisplay === 'none') {
+      menu.style.visibility = 'hidden';
+      menu.style.display = 'block';
+    }
+
+    const btnRect = btn.getBoundingClientRect();
+    const menuRect = menu.getBoundingClientRect();
+
+    let top = btnRect.bottom + window.scrollY + 8; // 8px gap
+    let left = btnRect.right + window.scrollX - menuRect.width; // right-align to button
+
+    const minLeft = 8 + window.scrollX;
+    const maxLeft = document.documentElement.clientWidth + window.scrollX - menuRect.width - 8;
+    if (left < minLeft) left = minLeft;
+    if (left > maxLeft) left = maxLeft;
+
+    menu.style.top = top + 'px';
+    menu.style.left = left + 'px';
+
+    menu.style.display = prevDisplay;
+    menu.style.visibility = prevVisibility;
+  }
+
+  // Animation helpers: use 'show' class to animate in/out
+  function animateOpen() {
+    positionMenu();
+    menu.classList.add('show');
+    menu.style.display = 'block';
+    btn.setAttribute('aria-expanded', 'true');
+    setTimeout(() => { input.focus(); }, 0);
+  }
+
+  function animateClose() {
+    // remove 'show' to let CSS animate out, then hide after transition
+    menu.classList.remove('show');
+    btn.setAttribute('aria-expanded', 'false');
+    const onEnd = function() {
+      menu.style.display = 'none';
+      menu.removeEventListener('transitionend', onEnd);
+    };
+    menu.addEventListener('transitionend', onEnd);
+  }
+
+  // Only attach toggle behavior if the control is a BUTTON. If it's an anchor (temporary), we don't intercept clicks.
+  if (btn.tagName === 'BUTTON') {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const isHidden = window.getComputedStyle(menu).display === 'none' || menu.style.display === 'none';
+      if (isHidden) {
+        document.querySelectorAll('#get-demo-studio-menu').forEach(m => { if (m !== menu) { m.classList.remove('show'); m.style.display = 'none'; } });
+        animateOpen();
+      } else {
+        animateClose();
+      }
+    });
+  }
+
+  function onGlobalMove() {
+    if (window.getComputedStyle(menu).display !== 'none') positionMenu();
+  }
+  window.addEventListener('resize', onGlobalMove);
+  window.addEventListener('scroll', onGlobalMove, true);
+
+  document.addEventListener('click', function() {
+    if (window.getComputedStyle(menu).display !== 'none') animateClose();
+  });
+
+  menu.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      submit.click();
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      if (window.getComputedStyle(menu).display !== 'none') animateClose();
+    }
+  });
+
+  submit.addEventListener('click', function(e) {
+    e.preventDefault();
+    const val = (input.value || '').trim();
+    if (!val) {
+      input.focus();
+      return;
+    }
+    const cleaned = val.replace(/^https?:\/\//i, '').replace(/\.zendesk\.com.*$/i, '').replace(/\/.*/g,'');
+    const url = `https://${encodeURIComponent(cleaned)}.zendesk.com/api/support/apps/1166513/approve`;
+    window.open(url, '_blank');
+    animateClose();
+  });
+});
+</script>
