@@ -1,4 +1,4 @@
-// Nuxt 3 config with Tailwind, Radix Vue, and public runtime config
+// Nuxt 3 config — personal profile site for Chris James.
 import { defineNuxtConfig } from 'nuxt/config';
 
 export default defineNuxtConfig({
@@ -13,26 +13,22 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Zendesk Demo Engineering — Demo Studio',
+      title: 'Chris James — Demo Architect @ Zendesk',
       meta: [
-        { name: 'description', content: 'Internal microsite: Access Demo Studio, learn about Demo Engineering, and find resources.' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+        {
+          name: 'description',
+          content:
+            'Chris James — Demo Architect at Zendesk. AI copilots, internal tooling, and developer experiences for go-to-market engineering.'
+        },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'theme-color', content: '#1B263B' }
       ],
       link: [
-        // Optional: Zendesk Garden base + MDI (from provided small apps UI notes)
-        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/combine/npm/@zendeskgarden/css-bedrock@7.0.21,npm/@zendeskgarden/css-utilities@4.3.0' },
         { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap' }
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap' }
       ]
     }
-  },
-  runtimeConfig: {
-    public: {
-      // Update these in .env or runtime
-      demoStudioUrl: '',       // e.g., https://<your-subdomain>.zendesk.com/agent/?demo_studio=1
-      requestAccessUrl: ''     // e.g., Slack form, Google Form, or internal Help Center article
-    }
-  },
+  }
 });
