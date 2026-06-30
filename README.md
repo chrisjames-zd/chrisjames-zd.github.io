@@ -14,7 +14,7 @@ npm run preview  # preview the production build locally
 npm run generate # static export for GitHub Pages (.output/public)
 ```
 
-Requires Node.js 18 or newer.
+Requires Node.js 20.19+ (or 22.12+).
 
 ## Editing content
 
